@@ -6,7 +6,7 @@ Measured on this machine (Node v24.19.0, seed `20261112`):
 
 - **300/300** randomly rotated/scaled convex meshes certified convex, **0 false positives**
 - **150/150** rotated non-convex meshes refuted, **0 false negatives**, **150/150** witnesses independently re-verified
-- **27,700** vertex–face checks in **15.06 ms** → **1,839,099 checks/s**
+- **27,700** vertex–face checks in **15.06–16.39 ms** across two runs → **1,690,282–1,839,099 checks/s**
 - test suite: **15/15 assertions passed** (`node test/core.test.mjs`)
 
 `Upstream:` 原创
