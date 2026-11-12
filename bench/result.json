@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-11-12T15:07:43.519Z",
+  "node": "v24.19.0",
+  "seed": 20261112,
+  "convex_meshes": 300,
+  "convex_certified": 300,
+  "false_positives": 0,
+  "concave_meshes": 150,
+  "concave_rejected": 150,
+  "false_negatives": 0,
+  "witnesses_verified": 150,
+  "vertex_face_checks_convex": 27700,
+  "convex_ms": 15.06,
+  "concave_ms": 4.68,
+  "checks_per_second": 1839099
+}

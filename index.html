@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>convexity-cert-lab</title>
+<style>
+  :root { color-scheme: dark; --ok:#3ddc97; --bad:#ff5d73; --ink:#d7dde5; --dim:#8b98a8; }
+  body { margin:0; font:14px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace; background:#0b0f14; color:var(--ink); }
+  header { padding:18px 22px 8px; }
+  h1 { font-size:18px; margin:0 0 4px; letter-spacing:.02em; }
+  p.sub { margin:0; color:var(--dim); }
+  main { display:grid; grid-template-columns:minmax(0,1fr) 340px; gap:18px; padding:14px 22px 24px; }
+  canvas { width:100%; height:min(72vh,640px); background:#0e141c; border:1px solid #1e2a38; border-radius:10px; }
+  aside { border:1px solid #1e2a38; border-radius:10px; padding:14px; background:#0e141c; }
+  button { background:#16212e; color:var(--ink); border:1px solid #2a3a4d; border-radius:7px; padding:7px 9px; margin:0 6px 6px 0; cursor:pointer; font:inherit; }
+  button:hover { border-color:#4a6584; }
+  .verdict { font-size:20px; margin:10px 0 6px; }
+  .ok { color:var(--ok); } .bad { color:var(--bad); }
+  dl { display:grid; grid-template-columns:auto 1fr; gap:4px 12px; margin:10px 0 0; }
+  dt { color:var(--dim); } dd { margin:0; text-align:right; }
+  code { color:#9ecbff; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Convexity certificate</h1>
+  <p class="sub">Every claim is recomputed from raw vertex indices; red vertices are falsifying witnesses.</p>
+</header>
+<main>
+  <canvas id="view" width="900" height="640"></canvas>
+  <aside>
+    <div id="buttons"></div>
+    <div id="verdict" class="verdict">—</div>
+    <dl id="stats"></dl>
+    <p class="sub" style="margin-top:14px">A vertex strictly outside a face plane, recomputed by <code>verifyWitness()</code>, refutes convexity. No vertex-face pair outside means the supporting-plane sweep found no counterexample.</p>
+  </aside>
+</main>
+<script type="module" src="./app.mjs"></script>
+</body>
+</html>

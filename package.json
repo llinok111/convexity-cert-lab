@@ -1,0 +1,12 @@
+{
+  "name": "convexity-cert-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Supporting-plane convexity certificate with independently verified falsifying witnesses",
+  "scripts": {
+    "test": "node test/core.test.mjs",
+    "bench": "node bench/run.mjs"
+  },
+  "license": "MIT"
+}
